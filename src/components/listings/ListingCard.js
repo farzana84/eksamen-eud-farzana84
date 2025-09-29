@@ -6,7 +6,7 @@ export default function ListingCard({ singleListing }) {
 
   const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL;
   const url = singleListing?.asset?.url || null;
-  const newUrl = baseUrl + url.slice("http://localhost:4000".length);
+  const newUrl = baseUrl + url.slice("http://localhost:4000/api/v1".length);
 
   return (
     <Link
