@@ -17,7 +17,6 @@ const nextConfig = {
             {
               protocol: "https",
               hostname: "swaphub-api.onrender.com",
-              port: " ",
               pathname: "/**",
             },
           ],
