@@ -7,16 +7,17 @@ const nextConfig = {
             // Development Pattern
             {
               protocol: "http",
-              hostname: "localhost", // local development server port
+              hostname: "localhost", 
+              port:"4000" , // local development server port
               pathname: "/**",
             },
           ]
         : [
             // Production Pattern
             {
-              protocol: "http",
-              hostname: "localhost",
-              port: "4000",
+              protocol: "https",
+              hostname: "https://swaphub-api.onrender.com/",
+              port: " ",
               pathname: "/**",
             },
           ],
