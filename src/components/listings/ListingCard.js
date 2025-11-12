@@ -42,7 +42,11 @@ import Link from "next/link";
 import Image from "next/image";
 export default function ListingCard({ singleListing }) {
   const { id, title = "Text" } = singleListing || {};
-  const img = singleListing?.asset?.url || null;
+  //const img = singleListing?.asset?.url || null;
+   const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL;
+   const url = singleListing?.asset?.url || null;
+   const newUrl = baseUrl + url.slice("http://localhost:4000/api/v1".length);
+
   return (
     <Link
       href={`/item-detail/${id}`}
@@ -50,9 +54,9 @@ export default function ListingCard({ singleListing }) {
     >
       <div className="p-5">
       <div className="relative aspect-square rounded bg-gray-200 overflow-hidden">
-          {img ? (
+          {url ? (
             <Image
-              src={img}
+              src={newUrl}
               alt={title}
               fill
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
