@@ -16,7 +16,7 @@ const nextConfig = {
             // Production Pattern
             {
               protocol: "https",
-              hostname: "https://swaphub-api.onrender.com/api/v1",
+              hostname: "swaphub-api.onrender.com",
               port: " ",
               pathname: "/**",
             },
