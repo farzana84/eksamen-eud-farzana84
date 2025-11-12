@@ -45,7 +45,8 @@ export default function ListingCard({ singleListing }) {
   //const img = singleListing?.asset?.url || null;
    const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL;
    const url = singleListing?.asset?.url || null;
-   const newUrl = baseUrl + url.slice("http://localhost:4000/api/v1".length);
+  
+  const imageUrl = baseUrl + url.slice("http://localhost:4000".length);
 
   return (
     <Link
@@ -56,7 +57,7 @@ export default function ListingCard({ singleListing }) {
       <div className="relative aspect-square rounded bg-gray-200 overflow-hidden">
           {url ? (
             <Image
-              src={newUrl}
+              src={imageUrl}
               alt={title}
               fill
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
