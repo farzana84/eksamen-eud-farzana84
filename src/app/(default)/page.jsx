@@ -2,7 +2,7 @@
 import { useState } from "react";
 import SearchForm from "@/components/forms/SearchForm";
 import PaginatedListings from "@/components/listings/PaginatedListings";
-//import NewsletterForm from "@/components/forms/NewsletterForm";
+import NewsletterForm from "@/components/forms/NewsletterForm";
 export default function ListingsPage() {
   const [searchQuery, setSearchQuery] = useState("");
   const [sortBy, setSortBy] = useState("new");
@@ -29,7 +29,7 @@ export default function ListingsPage() {
             <section id="contact" className="mt-16">
               <div className="rounded-2xl border border-green-100 bg-gradient-to-r from-green-50 to-emerald-50 p-6 sm:p-10">
                 <div className="max-w-2xl mx-auto">
-                  {/* <NewsletterForm /> */}
+                  <NewsletterForm /> 
                 </div>
               </div>
             </section>
